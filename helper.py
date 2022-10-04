@@ -1,4 +1,4 @@
-from tkinter.tix import COLUMN
+
 import numpy as np
 def medal_tally(df):
     medal_tally=df.drop_duplicates(subset=['Team','NOC','Games','Year','City','Sport','Event','Medal'])
