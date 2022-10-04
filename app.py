@@ -12,8 +12,8 @@ st.sidebar.header("Olympic Analysis")
 st.sidebar.image('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8stG2LEGR7KKjYYKki_eVTtTowTI6i0vs4IFNRwu0wt2D1lgHMiuIhincEmP6uzSbd_U&usqp=CAU')
 menu=st.sidebar.radio('Select an option',
          ('Medal_tally','Overall_Analysis','Player_Wise_Analysis','Country_Wise'))
-data=pd.read_csv(r'C:\Users\user\Desktop\olympic\data1.csv')
-region_df=pd.read_csv(r'C:\Users\user\Desktop\olympic\noc_regions.csv')
+data=pd.read_csv('data1.csv')
+region_df=pd.read_csv('noc_regions.csv')
 data=preprocessor.process(data,region_df)
 medal_tally=helper.medal_tally(data)
 if(menu=='Medal_tally'):
